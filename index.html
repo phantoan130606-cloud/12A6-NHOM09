@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Du Lịch Sinh Thái Vĩnh Long | Khám phá Đồng Bằng Sông Cửu Long</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="application-name" content="Du Lịch Sinh Thái Vĩnh Long">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="DLST Vĩnh Long">
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/3082/3082383.png">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2e7d32" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1b5e20" media="(prefers-color-scheme: dark)">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Meta Tags SEO -->
+    <meta name="description" content="Khám phá hệ sinh thái độc đáo, miệt vườn trái cây, rừng tràm và những cù lao xanh mát tại Đồng Bằng Sông Cửu Long. Đặt tour du lịch sinh thái Vĩnh Long với giá tốt nhất.">
+    <meta name="keywords" content="du lịch sinh thái Vĩnh Long, đồng bằng sông cửu long, cù lao an bình, vườn quốc gia tràm chim, rừng tràm trà sư, tour du lịch sinh thái">
+    <meta name="author" content="Du Lịch Sinh Thái Vĩnh Long">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Du Lịch Sinh Thái Vĩnh Long">
+    <meta property="og:description" content="Khám phá hệ sinh thái độc đáo Đồng Bằng Sông Cửu Long">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:url" content="https://dulichsinhthaimientay.vn">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Du Lịch Sinh Thái Vĩnh Long">
+    <meta name="twitter:description" content="Khám phá hệ sinh thái độc đáo Đồng Bằng Sông Cửu Long">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3082/3082383.png">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Analytics Scripts (Place in head for faster loading) -->
+    <!--  Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Facebook Pixel -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script>
+    </script>
+</head>
+    <!-- Hiệu ứng thiên nhiên -->
+<script src="nature-effects.js"></script>
+</body>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo" data-page="home">
+                <i class="fas fa-leaf"></i>
+                <h1>Du Lịch Sinh Thái Vĩnh Long</h1>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="#" data-page="home" class="active">Trang Chủ</a></li>
+                    <li><a href="#" data-page="about">Giới Thiệu</a></li>
+                    <li><a href="#" data-page="categories">Điểm Đến</a></li>
+                    <li><a href="#" data-page="map">Bản Đồ</a></li>
+                    <li><a href="#" data-page="education">Giáo Dục</a></li>
+                    <li><a href="#" data-page="planner">Lịch Trình</a></li>
+                    <li><a href="#" data-page="bookings">Booking</a></li>
+                    <li><a href="#" data-page="contact">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Page -->
+        <div class="page active" id="home-page">
+            <section class="hero">
+                <div class="container">
+                    <h2>Khám Phá Vẻ Đẹp Thiên Nhiên Vĩnh Long</h2>
+                    <p>Trải nghiệm hệ sinh thái độc đáo, miệt vườn trái cây, rừng tràm và những cù lao xanh mát tại Đồng Bằng Sông Cửu Long</p>
+                    <a href="" class="cta-button" data-page="categories">Khám Phá Ngay</a>
+                    <a href="#" class="cta-button secondary" data-page="">Lên Lịch Trình</a>
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Điểm Đến Nổi Bật</h2>
+                        <p class="section-subtitle">Khám phá những địa điểm du lịch sinh thái hấp dẫn nhất Vĩnh Long</p>
+                    </div>
+                    
+                    <div class="destinations-grid" id="featuredDestinations">
+                        <!-- Featured destinations will be loaded by JavaScript -->
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 40px;">
+                        <a href="#" class="cta-button" data-page="categories">Xem Tất Cả Điểm Đến</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Stats -->
+            <section class="quick-stats">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <div>
+                                <h3><font color="black">8+</font></h3>
+                                <p><font color="black">Điểm đến</font></p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-user-friends"></i>
+                            <div>
+                                <h3><font color="black">500+</font></h3>
+                                <p><font color="black">Khách hàng</font></p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <h3><font color="black">4.8</font></h3>
+                                <p><font color="black">Đánh giá</font></p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-leaf"></i>
+                            <div>
+                                <h3><font color="black">100%</font></h3>
+                                <p><font color="black">Thân thiện môi trường</font></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Page -->
+        <div class="page" id="about-page">
+            <section>
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Giới Thiệu</h2>
+                        <p class="section-subtitle">Về chúng tôi và sứ mệnh bảo vệ môi trường</p>
+                    </div>
+                    
+                    <div class="about-content">
+                        <div class="about-text">
+                            <h3>Về Chúng Tôi</h3>
+                            <p>Website "Du Lịch Sinh Thái Vĩnh Long" được xây dựng với mục đích quảng bá và giới thiệu những điểm du lịch sinh thái đặc sắc tại vùng Đồng Bằng Sông Cửu Long - vùng đất được mệnh danh là "vựa lúa" và "miệt vườn" của Việt Nam.</p>
+                            <p>Chúng tôi mong muốn mang đến cho du khách những thông tin hữu ích, chính xác về các điểm đến sinh thái, giúp du khách có những trải nghiệm tuyệt vời khi khám phá vùng đất này, đồng thời nâng cao ý thức bảo vệ môi trường và hệ sinh thái tự nhiên.</p>
+                            
+                            <h3>Địa Bàn Nghiên Cứu</h3>
+                            <p>Website tập trung vào các tỉnh thuộc khu vực Đồng Bằng Sông Cửu Long, đặc biệt là:</p>
+                            <ul>
+                                <li><strong>Vĩnh Long</strong> - Trung tâm của các cù lao sinh thái</li>
+                                <li><strong>Trà Vinh</strong> - hành phố trong rừng xanh</li>
+                                <li><strong>Bến Tre</strong> - Xứ sở của dừa và miệt vườn</li>
+                            </ul>
+                            
+                            <h3>Sứ Mệnh</h3>
+                            <p>Chúng tôi cam kết phát triển du lịch bền vững, tôn trọng thiên nhiên và văn hóa địa phương, đồng thời góp phần nâng cao đời sống cho cộng đồng dân cư.</p>
+                        </div>
+                        
+                        <div class="about-image">
+                            <img src="https://cdn.tgdd.vn/Files/2021/07/03/1365427/23-dia-diem-du-lich-vinh-long-hap-dan-khach-du-lich-202107031811068428.jpg" alt="Vĩnh Long sông nước" loading="lazy">
+                        </div>
+                    </div>
+                    
+                    <div class="team-section">
+                        <h3 class="section-subtitle">Nhóm Thực Hiện</h3>
+                        
+                        <div class="team-members">
+                            <div class="team-member">
+                                <img src="thu.jpg" alt="Thành viên 1" loading="lazy">
+                                <h4>Trần Cẩm Thư </h4>
+                                <p class="role">Trưởng nhóm</p>
+                            </div>
+                            
+                            <div class="team-member">
+                                <img src="khoa.jpg" alt="Thành viên 2" loading="lazy">
+                                <h4>Trần Đăng khoa</h4>
+                                <p class="role">Phó nhóm</p>
+                            </div>
+                            
+                            <div class="team-member">
+                                <img src="khoi.jpg" alt="Thành viên 3" loading="lazy">
+                                <h4>Phạm Nguyễn Anh Khôi</h4>
+                                <p class="role">Thành viên</p>
+                            </div>
+                            
+                            <div class="team-member">
+                                <img src="lam.jpg" alt="Thành viên 4" loading="lazy">
+                                <h4>Nguyễn Hồng Lam</h4>
+                                <p class="role">Thành viên</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Categories Page -->
+        <div class="page" id="categories-page">
+            <section>
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Điểm Du Lịch Sinh Thái</h2>
+                        <p class="section-subtitle">Khám phá vẻ đẹp thiên nhiên Vĩnh Long</p>
+                    </div>
+                    
+                    <!-- Search and Filter -->
+                    <div class="search-filter-container">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="searchInput" placeholder="Tìm kiếm điểm đến...">
+                        </div>
+                        <div class="filter-options">
+                            <div class="filter-group">
+                                <label for="provinceFilter"><i class="fas fa-map-marker-alt"></i> Tỉnh</label>
+                                <select id="provinceFilter">
+                                    <option value="">Tất cả tỉnh</option>
+                                    <option value="Vĩnh Long">Vĩnh Long</option>
+                                    <option value="Đồng Tháp">Đồng Tháp</option>
+                                    <option value="An Giang">An Giang</option>
+                                    <option value="Tiền Giang">Tiền Giang</option>
+                                    <option value="Bến Tre">Bến Tre</option>
+                                    <option value="Cà Mau">Cà Mau</option>
+                                    <option value="Long An">Long An</option>
+                                </select>
+                            </div>
+                            
+                            <div class="filter-group">
+                                <label for="ratingFilter"><i class="fas fa-star"></i> Đánh giá</label>
+                                <select id="ratingFilter">
+                                    <option value="">Tất cả</option>
+                                    <option value="4.5">4.5+ sao</option>
+                                    <option value="4">4+ sao</option>
+                                    <option value="3">3+ sao</option>
+                                </select>
+                            </div>
+                            
+                            <div class="filter-group">
+                                <label for="priceFilter"><i class="fas fa-tag"></i> Giá</label>
+                                <select id="priceFilter">
+                                    <option value="">Tất cả</option>
+                                    <option value="budget">Dưới 500.000đ</option>
+                                    <option value="mid">500.000đ - 1.000.000đ</option>
+                                    <option value="luxury">Trên 1.000.000đ</option>
+                                </select>
+                            </div>
+                            
+                            <button id="clearFilters" class="cta-button secondary">Xóa bộ lọc</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tabs">
+                        <div class="tab active" data-category="all">Tất Cả</div>
+                        <div class="tab" data-category="cu-lao">Cù Lao</div>
+                        <div class="tab" data-category="vuon-quoc-gia">Vườn Quốc Gia</div>
+                        <div class="tab" data-category="miet-vuon">Miệt Vườn</div>
+                        <div class="tab" data-category="he-sinh-thai">Hệ Sinh Thái Đặc Biệt</div>
+                    </div>
+                    
+                    <div class="destinations-grid" id="destinationsGrid">
+                        <!-- Destination cards will be loaded by JavaScript -->
+                    </div>
+                    
+                    <!-- No Results Message -->
+                    <div id="noResults" class="no-results" style="display: none;">
+                        <i class="fas fa-search"></i>
+                        <h3>Không tìm thấy điểm nào phù hợp</h3>
+                        <p>Hãy thử thay đổi tiêu chí tìm kiếm hoặc bộ lọc</p>
+                        <button id="resetSearch" class="cta-button">Hiển thị tất cả</button>
+                    </div>
+                    
+                    <!-- Loading Spinner -->
+                    <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+                        <div class="spinner"></div>
+                        <p>Đang tải dữ liệu...</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Detail Page -->
+        <div class="page" id="detail-page">
+            <section>
+                <div class="container">
+                    <a href="#" class="back-button" data-page="categories">
+                        <i class="fas fa-arrow-left"></i> Quay lại danh sách
+                    </a>
+                    
+                    <div class="detail-container" id="detailContainer">
+                        <!-- Detail content will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Map Page -->
+        <div class="page" id="map-page">
+            <section>
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Bản Đồ Điểm Du Lịch</h2>
+                        <p class="section-subtitle">Khám phá vị trí các điểm du lịch sinh thái Vĩnh Long</p>
+                    </div>
+                    
+                    <div class="map-controls">
+                        <button class="map-layer active" data-layer="all">Tất Cả Điểm</button>
+                        <button class="map-layer" data-layer="cu-lao">Cù Lao</button>
+                        <button class="map-layer" data-layer="vuon-quoc-gia">Vườn Quốc Gia</button>
+                        <button class="map-layer" data-layer="miet-vuon">Miệt Vườn</button>
+                        <button class="map-layer" data-layer="he-sinh-thai">Hệ Sinh Thái Đặc Biệt</button>
+                    </div>
+                    
+                    <div id="map">
+                        <!-- Map will be initialized by JavaScript -->
+                    </div>
+                    
+                    <div class="map-legend">
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #2e7d32;"></span>
+                            <span>Cù Lao</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #2196f3;"></span>
+                            <span>Vườn Quốc Gia</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #ff9800;"></span>
+                            <span>Miệt Vườn</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #9c27b0;"></span>
+                            <span>Hệ Sinh Thái Đặc Biệt</span>
+                        </div>
+                    </div>
+                    
+                    <div class="map-destinations" id="mapDestinations">
+                        <!-- Map destination list will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Education Page -->
+        <div class="page" id="education-page">
+            <section>
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Giáo Dục Môi Trường</h2>
+                        <p class="section-subtitle">Tìm hiểu và bảo vệ hệ sinh thái Vĩnh Long</p>
+                    </div>
+                    
+                    <div class="education-container" id="educationContainer">
+                        <!-- Education content will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Planner Page -->
+        <div class="page" id="planner-page">
+            <section>
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Lập Lịch Trình Du Lịch</h2>
+                        <p class="section-subtitle">Tạo lịch trình du lịch Vĩnh Long của riêng bạn</p>
+                    </div>
+                    
+                    <div class="planner-container" id="plannerContainer">
+                        <!-- Planner content will be loaded by JavaScript -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Bookings Page -->
+        <div class="page" id="bookings-page">
+            <section>
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Quản Lý Booking</h2>
+                        <p class="section-subtitle">Xem và quản lý các tour đã đặt</p>
+                    </div>
+                    
+                    <div class="bookings-container" id="bookingsContainer">
+                        <!-- Bookings will be loaded by JavaScript -->
+                    </div>
+                    
+                    <div class="no-bookings" id="noBookings" style="display: none;">
+                        <i class="fas fa-calendar-times"></i>
+                        <h3>Bạn chưa có booking nào</h3>
+                        <p>Hãy đặt tour để khám phá Vĩnh Long sông nước!</p>
+                        <a href="#" class="cta-button" data-page="categories">Đặt Tour Ngay</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page -->
+        <div class="page" id="contact-page">
+            <section>
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Liên Hệ</h2>
+                        <p class="section-subtitle">Liên hệ với chúng tôi để được tư vấn và hỗ trợ</p>
+                    </div>
+                    
+                    <div class="contact-content">
+                        <div class="contact-info">
+                            <h3>Thông Tin Liên Hệ</h3>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Địa Chỉ</h4>
+                                    <p>123 Đường 3/2, Phường Xuân Khánh, Quận Ninh Kiều, TP. Cần Thơ</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <div>
+                                    <h4>Điện Thoại</h4>
+                                    <p>0292 3 123 456</p>
+                                    <p>Hotline: 0909 123 456</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>info@dulichsinhthaimientay.vn</p>
+                                    <p>support@dulichsinhthaimientay.vn</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <h4>Giờ Làm Việc</h4>
+                                    <p>Thứ 2 - Thứ 6: 8:00 - 17:00</p>
+                                    <p>Thứ 7: 8:00 - 12:00</p>
+                                    <p>Chủ nhật: Nghỉ</p>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+                        
+                        <div class="contact-form">
+                            <h3>Gửi Tin Nhắn Cho Chúng Tôi</h3>
+                            <form id="contactForm">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="name">Họ và Tên *</label>
+                                        <input type="text" id="name" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="email">Email *</label>
+                                        <input type="email" id="email" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">Số Điện Thoại</label>
+                                    <input type="tel" id="phone" pattern="[0-9]{10,11}">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject">Chủ Đề</label>
+                                    <select id="subject">
+                                        <option value="general">Thông tin chung</option>
+                                        <option value="tour">Đặt tour</option>
+                                        <option value="feedback">Góp ý</option>
+                                        <option value="partnership">Hợp tác</option>
+                                        <option value="complaint">Khiếu nại</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Nội Dung *</label>
+                                    <textarea id="message" rows="5" required placeholder="Xin vui lòng nhập nội dung tin nhắn..."></textarea>
+                                </div>
+                                
+                                <div class="form-checkbox">
+                                    <input type="checkbox" id="newsletter" checked>
+                                    <label for="newsletter">Đăng ký nhận bản tin khuyến mãi</label>
+                                </div>
+                                
+                                <button type="submit" class="cta-button">Gửi Tin Nhắn</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Section -->
+                    <div class="faq-section">
+                        <h3>Câu Hỏi Thường Gặp</h3>
+                        <div class="faq-list">
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4>Làm thế nào để đặt tour?</h4>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Bạn có thể đặt tour trực tuyến bằng cách chọn điểm đến, điền thông tin và thanh toán. Hoặc liên hệ hotline để được hỗ trợ đặt tour.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="faq-item">
+                                <div class="faq-question">
+                                    <h4>Chính sách hủy tour như thế nào?</h4>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Hủy trước 7 ngày: Hoàn 100%<br>
+                                       Hủy trước 3 ngày: Hoàn 50%<br>
+                                       Hủy trong 48h: Hoàn 30%<br>
+                                       Hủy trong 24h: Không hoàn tiền</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Du Lịch Sinh Thái Vĩnh Long</h3>
+                    <p>Khám phá vẻ đẹp thiên nhiên, hệ sinh thái độc đáo và văn hóa đặc sắc của vùng Đồng Bằng Sông Cửu Long.</p>
+                    
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Liên Kết Nhanh</h3>
+                    <ul>
+                        <li><a href="#" data-page="home">Trang Chủ</a></li>
+                        <li><a href="#" data-page="about">Giới Thiệu</a></li>
+                        <li><a href="#" data-page="categories">Điểm Đến</a></li>
+                        <li><a href="#" data-page="map">Bản Đồ</a></li>
+                        <li><a href="#" data-page="education">Giáo Dục</a></li>
+                        <li><a href="#" data-page="contact">Liên Hệ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Điểm Đến Nổi Bật</h3>
+                    <ul>
+                        <li><a href="#" data-detail="1">Cù Lao An Bình</a></li>
+                        <li><a href="#" data-detail="5">Vườn Trái Cây Cái Mơn</a></li>
+                        <li><a href="#" data-detail="3">Khu du lịch sinh thái Lan Vương</a></li>
+                        <li><a href="#" data-detail="6">Cồn Phụng</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Đăng Ký Nhận Tin</h3>
+                    <p>Nhận thông tin khuyến mãi và tour mới nhất qua email.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Email của bạn">
+                        <button type="submit">Đăng ký</button>
+                    </div>
+                    <p class="footer-note">Cam kết không spam!</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 Du Lịch Sinh Thái Vĩnh Long. Tất cả các quyền được bảo lưu.</p>
+                    <p>Website được phát triển cho mục đích giáo dục và nghiên cứu.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#" data-page="privacy">Chính sách bảo mật</a>
+                    <a href="#" data-page="terms">Điều khoản sử dụng</a>
+                    <a href="#" data-page="sitemap">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Image Modal -->
+    <div class="modal" id="imageModal">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <div class="modal-content">
+            <img class="modal-image" id="modalImage">
+            <div class="modal-caption" id="modalCaption"></div>
+        </div>
+    </div>
+
+    <!-- Booking Confirmation Modal -->
+    <div class="modal" id="bookingConfirmation">
+        <div class="modal-content booking-modal">
+            <!-- Booking confirmation content will be loaded by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content payment-modal">
+            <h2>Thanh Toán</h2>
+            <div class="payment-options">
+                <div class="payment-option" data-method="momo">
+                    <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Icon-MoMo.png" alt="Momo">
+                    <span>Ví MoMo</span>
+                </div>
+                <div class="payment-option" data-method="vnpay">
+                    <img src="https://vnpay.vn/logo/logo-vnpay.svg" alt="VNPay">
+                    <span>VNPay</span>
+                </div>
+                <div class="payment-option" data-method="bank">
+                    <i class="fas fa-university"></i>
+                    <span>Chuyển khoản ngân hàng</span>
+                </div>
+                <div class="payment-option" data-method="cash">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Tiền mặt</span>
+                </div>
+            </div>
+            <div class="payment-details" id="paymentDetails">
+                <!-- Payment details will be loaded by JavaScript -->
+            </div>
+            <div class="modal-actions">
+                <button class="cta-button" id="confirmPayment">Xác nhận thanh toán</button>
+                <button class="cta-button secondary" onclick="closeModal('paymentModal')">Hủy</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <p>Đang xử lý...</p>
+    </div>
+
+    <!-- Install App Prompt -->
+    <div class="install-prompt" id="installPrompt">
+        <div class="install-content">
+            <i class="fas fa-download"></i>
+            <div>
+                <h4>Cài đặt ứng dụng</h4>
+                <p>Cài đặt ứng dụng để có trải nghiệm tốt hơn</p>
+            </div>
+            <button class="cta-button" id="installButton">Cài đặt</button>
+            <button class="secondary" id="dismissInstall">Bỏ qua</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <!-- Lazy Load Scripts -->
+    <script src="data.js" defer></script>
+    <script src="lazy-loader.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="analytics.js" defer></script>
+    <script src="service-worker.js" defer></script>
+    
+    <!-- New Scripts -->
+    <script src="bookings-manager.js" defer></script>
+    <script src="seo-optimizer.js" defer></script>
+
+    <!-- PWA Registration and Install Prompt -->
+    <script>
+        // Register Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registered with scope:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+
+        // Install Prompt
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            window.deferredPrompt = e;
+            
+            const installPrompt = document.getElementById('installPrompt');
+            if (installPrompt) {
+                installPrompt.style.display = 'block';
+            }
+        });
+
+        document.getElementById('installButton')?.addEventListener('click', async () => {
+            if (!window.deferredPrompt) return;
+            
+            window.deferredPrompt.prompt();
+            const { outcome } = await window.deferredPrompt.userChoice;
+            
+            window.deferredPrompt = null;
+            document.getElementById('installPrompt').style.display = 'none';
+        });
+
+        document.getElementById('dismissInstall')?.addEventListener('click', () => {
+            document.getElementById('installPrompt').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
