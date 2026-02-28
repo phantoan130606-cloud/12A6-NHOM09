@@ -16,7 +16,7 @@ function loadEducationContent() {
     educationContainer.innerHTML = `
         <div class="education-intro">
             <h3>Bảo Vệ Hệ Sinh Thái Vĩnh Long</h3>
-            <p>Đồng bằng sông Cửu Long là một trong những khu vực có đa dạng sinh học cao nhất Việt Nam. Tuy nhiên, hệ sinh thái nơi đây đang đối mặt với nhiều thách thức do biến đổi khí hậu và hoạt động của con người. Hãy cùng tìm hiểu và hành động để bảo vệ môi trường sống này.</p>
+            <p>Tỉnh Vĩnh Long thuộc đồng bằng sông Cửu Long là một trong những khu vực có đa dạng sinh học cao nhất Việt Nam. Tuy nhiên, hệ sinh thái nơi đây đang đối mặt với nhiều thách thức do biến đổi khí hậu và hoạt động của con người. Hãy cùng tìm hiểu và hành động để bảo vệ môi trường sống này.</p>
         </div>
         
         <div class="education-cards">
@@ -43,7 +43,7 @@ const educationTopics = [
         title: "Hệ Sinh Thái Rừng Tràm",
         image: "https://cdn.tgdd.vn/Files/2022/03/30/1422964/kham-pha-du-lich-rung-tram-tra-su-o-an-giang-xanh-muot-mat-202203300104042991.jpg",
         content: `
-            <p>Rừng tràm là hệ sinh thái đặc trưng của Đồng bằng sông Cửu Long, có vai trò quan trọng trong:</p>
+            <p>Rừng tràm là hệ sinh thái đặc trưng của Vĩnh Long, có vai trò quan trọng trong:</p>
             <ul>
                 <li>Điều hòa khí hậu và nguồn nước</li>
                 <li>Bảo vệ đất và chống xói mòn</li>
@@ -59,7 +59,7 @@ const educationTopics = [
         title: "Đa Dạng Sinh Học",
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUKSqOSsmSlWaM32T2rGgKzsoNt3FHKW4M1g&s",
         content: `
-            <p>Đồng bằng sông Cửu Long là nơi sinh sống của hàng nghìn loài động thực vật, trong đó có nhiều loài quý hiếm:</p>
+            <p>Vĩnh Long là nơi sinh sống của hàng nghìn loài động thực vật, trong đó có nhiều loài quý hiếm:</p>
             <ul>
                 <li><strong>Thực vật:</strong> Hơn 1.000 loài, trong đó có nhiều loài đặc hữu</li>
                 <li><strong>Chim:</strong> Hơn 300 loài, bao gồm sếu đầu đỏ, giang sen</li>
@@ -74,7 +74,7 @@ const educationTopics = [
         title: "Biến Đổi Khí Hậu",
         image: "https://pantrading.vn/Data/Sites/1/media/bien-doi-khi-hau-la-gi-1.jpg",
         content: `
-            <p>Đồng bằng sông Cửu Long là một trong những khu vực chịu ảnh hưởng nặng nề nhất của biến đổi khí hậu:</p>
+            <p>Tỉnh Vĩnh Long là một trong những khu vực đồng bằng sông Cửu Long  chịu ảnh hưởng nặng nề nhất của biến đổi khí hậu:</p>
             <ul>
                 <li><strong>Nước biển dâng:</strong> Đe dọa xâm nhập mặn vào sâu trong đất liền</li>
                 <li><strong>Thời tiết cực đoan:</strong> Hạn hán và lũ lụt nghiêm trọng hơn</li>
